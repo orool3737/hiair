@@ -37,10 +37,10 @@ while j<4:
        friday_month[j+1] = 0
     j = j+1
 
-first_content = exract_flight(str(friday[1].day), friday_month[1])
-second_content = exract_flight(str(friday[2].day), friday_month[2])
-third_content = exract_flight(str(friday[3].day), friday_month[3])
-fourth_content = exract_flight(str(friday[4].day), friday_month[4])
+first_content = exract_flight_hiair(str(friday[1].day), friday_month[1])
+second_content = exract_flight_hiair(str(friday[2].day), friday_month[2])
+third_content = exract_flight_hiair(str(friday[3].day), friday_month[3])
+fourth_content = exract_flight_hiair(str(friday[4].day), friday_month[4])
 
 first_content.insert(0,friday[1].strftime('%Y-%m-%d'))
 second_content.insert(0,friday[2].strftime('%Y-%m-%d'))
