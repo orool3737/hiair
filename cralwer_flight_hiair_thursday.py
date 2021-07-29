@@ -37,6 +37,9 @@ def exract_flight_hiair_thursday(flight_day, flight_month):
    #도착 버튼 클릭
    driver.find_element_by_link_text("도착").click()
    driver.find_element_by_link_text("김포").click()
+   
+   #출발, 도착 변경 버튼 클릭
+   driver.find_element_by_xpath('//*[@id="l_1"]/div/div[2]/a[1]').click()
 
    #가는날 선택 버튼 클릭
    driver.find_element_by_link_text("가는날 선택").click()
