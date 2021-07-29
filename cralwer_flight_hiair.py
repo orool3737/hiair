@@ -78,9 +78,7 @@ def exract_flight_hiair(flight_day, flight_month):
    while soup:
        try:
            department_hour = datetime.datetime.strptime(department_time[3*i].text, '%H:%M').hour
-         '''
-           if department_hour >= 18 and department_hour < 19 and int(price[i].text.replace(',', '')) <= 50000 :
-           '''
+           #if department_hour >= 18 and department_hour < 19 and int(price[i].text.replace(',', '')) <= 50000 :
            content.append(company[i].text + " " + department_time[3*i].text + " ￦" + price[i].text)
            i = i + 1
        except IndexError:
