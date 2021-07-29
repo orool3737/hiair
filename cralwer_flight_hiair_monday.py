@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 
-def exract_flight_hiair(flight_day, flight_month):
+def exract_flight_hiair_monday(flight_day, flight_month):
    url='https://flight.naver.com/flights/'
 
    options = webdriver.ChromeOptions()
