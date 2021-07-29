@@ -10,7 +10,7 @@ import telegram
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from cralwer_flight_hiair import exract_flight_hiair
+from cralwer_flight_hiair_monday import exract_flight_hiair_monday
 
 now = datetime.datetime.today() + datetime.timedelta(hours=9)
 
