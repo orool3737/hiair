@@ -18,7 +18,7 @@ print(now)
 
 delta = 0 - now.weekday()
 if delta <= 0:
-    delta = 11 - now.weekday()
+    delta = 7 - now.weekday()
 
 friday = [0, 0, 0, 0, 0]
 friday[0] = now
