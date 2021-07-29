@@ -10,6 +10,7 @@ import telegram
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
 
 def exract_flight(flight_day, flight_month):
    url='https://flight.naver.com/flights/'
@@ -29,7 +30,9 @@ def exract_flight(flight_day, flight_month):
 
    #출발지 버튼 클릭
    driver.find_element_by_link_text("인천").click()
-   driver.find_element_by_link_text("김해/부산").click()
+   driver.find_element_by_xpath('//*[@id="l_1"]/div/div[1]/div[1]/input').send_keys('사천')
+   time.sleep(1)
+   driver.find_element_by_xpath('//*[@id="l_1"]/div/div[1]/div[3]/ul/li/a/strong').click()
   
    #도착 버튼 클릭
    driver.find_element_by_link_text("도착").click()
@@ -75,8 +78,10 @@ def exract_flight(flight_day, flight_month):
    while soup:
        try:
            department_hour = datetime.datetime.strptime(department_time[3*i].text, '%H:%M').hour
+         '''
            if department_hour >= 18 and department_hour < 19 and int(price[i].text.replace(',', '')) <= 50000 :
-              content.append(company[i].text + " " + department_time[3*i].text + " ￦" + price[i].text)
+           '''
+           content.append(company[i].text + " " + department_time[3*i].text + " ￦" + price[i].text)
            i = i + 1
        except IndexError:
            break
