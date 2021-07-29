@@ -74,12 +74,13 @@ def exract_flight_hiair(flight_day, flight_month):
    price = soup.select("span.txt_pay.ng-binding")
 
    content = []
-   department_hour = datetime.datetime.strptime(department_time[0].text, '%H:%M').hour
+   department_hour = []
+   department_hour.append = datetime.datetime.strptime(department_time[0].text, '%H:%M').hour
    content.append(company[0].text + " " + department_time[0].text + " ￦" + price[0].text)
    i=1
    while soup:
        try:
-           department_hour = datetime.datetime.strptime(department_time[3*i].text, '%H:%M').hour
+           department_hour.append = datetime.datetime.strptime(department_time[3*i].text, '%H:%M').hour
            if department_hour[3*i] != department_hour[3*(i-1)] :
               content.append(company[i].text + " " + department_time[3*i].text + " ￦" + price[i].text)
            i = i + 1
