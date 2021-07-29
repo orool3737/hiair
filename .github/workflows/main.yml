@@ -23,4 +23,4 @@ jobs:
       env:
         telegram_token: ${{ secrets.TELEGRAMTOKEN }}
       run: |
-        python flight.py
+        python flight_hiair.py
