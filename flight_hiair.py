@@ -16,7 +16,7 @@ now = datetime.datetime.today() + datetime.timedelta(hours=9)
 
 print(now)
 
-delta = 4 - now.weekday()
+delta = 3 - now.weekday()
 if delta <= 0:
     delta = 11 - now.weekday()
 
